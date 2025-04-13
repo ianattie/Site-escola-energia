@@ -77,7 +77,6 @@
     .image5 { bottom: 20%; right: 10%; }
     .image6 { top: 30%; right: 10%; }
 
-    /* Setas */
     .arrow {
       position: absolute;
       width: 60px;
@@ -158,7 +157,6 @@
       </p>
     </div>
 
-    <!-- Setas -->
     <div class="arrow seta-solar"><img src="seta-solar.png" alt="Seta Solar"></div>
     <div class="arrow seta-oceanica"><img src="seta-oceânica.png" alt="Seta Oceânica"></div>
     <div class="arrow seta-geotermica"><img src="seta-vulcânica.png" alt="Seta Geotérmica"></div>
@@ -166,14 +164,13 @@
     <div class="arrow seta-biomassa"><img src="seta-biomassa.png" alt="Seta Biomassa"></div>
     <div class="arrow seta-hidreletrica"><img src="seta-hidrelétrica.png" alt="Seta Hidrelétrica"></div>
 
-    <!-- Ícones -->
     <div class="image image1" onclick="mostrarPopup('A energia solar é gerada a partir da luz do sol. Por meio de painéis solares, essa luz é captada e transformada em eletricidade ou usada para aquecer a água. É uma das fontes mais limpas e abundantes do planeta, pois o sol nasce todos os dias e sua luz pode ser aproveitada em quase todos os lugares do mundo.')">
       <img src="solar.png" alt="Energia Solar">
     </div>
     <div class="image image2" onclick="mostrarPopup('A energia oceânica é gerada a partir do movimento das ondas, marés e até da diferença de temperatura dos oceanos. É uma tecnologia ainda em desenvolvimento, mas muito promissora, já que os oceanos cobrem grande parte da Terra e estão sempre em movimento.')">
       <img src="oceânica.png" alt="Energia Oceânica">
     </div>
-    <div class="image image3" onclick="mostrarPopup('A energia geotérmica vem do calor que está dentro da Terra. Em alguns lugares, a Terra é tão quente que dá pra usar esse calor pra aquecer casas ou gerar eletricidade. É como aproveitar o calor de um vulcão, mas de forma segura!')">
+    <div class="image image3" onclick="mostrarPopup('Essa energia vem do calor que está dentro da Terra. Em alguns lugares, a Terra é tão quente que dá pra usar esse calor pra aquecer casas ou gerar eletricidade. É como aproveitar o calor de um vulcão, mas de forma segura!')">
       <img src="geotérmica.png" alt="Energia Geotérmica">
     </div>
     <div class="image image4" onclick="mostrarPopup('A energia eólica vem do vento. Quando o vento sopra, ele movimenta grandes hélices chamadas aerogeradores. Esses equipamentos transformam a força do vento em energia elétrica. É uma fonte de energia sustentável e que não polui o ar.')">
@@ -187,7 +184,6 @@
     </div>
   </div>
 
-  <!-- Popup -->
   <div id="popup" class="popup">
     <div class="popup-content">
       <span class="close" onclick="fecharPopup()">&times;</span>
@@ -204,6 +200,12 @@
     function fecharPopup() {
       document.getElementById('popup').style.display = 'none';
     }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        fecharPopup();
+      }
+    });
   </script>
 </body>
 </html>
