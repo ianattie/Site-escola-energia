@@ -1,237 +1,243 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-  }
-  
-  body {
-    background-image: url('/assets/imgs/image.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  .texto-lousa {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #000;
-    z-index: 1;
-  }
-  
-  .texto-lousa h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-  }
-  
-  .texto-lousa p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  #click-imagens {
-    display: none;
-  }
-  
-  .image {
-    position: absolute;
-    width: 90px;
-    cursor: pointer;
-    z-index: 2;
-  }
-  
-  .image img {
-    width: 100%;
-    transition: transform 0.3s ease;
-  }
-  
-  .image img:hover {
-    transform: scale(1.3);
-    z-index: 3;
-  }
-  
-  .image1 {
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .image2 {
-    top: 30%;
-    left: 10%;
-  }
-  .image3 {
-    bottom: 20%;
-    left: 10%;
-  }
-  .image4 {
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .image5 {
-    bottom: 20%;
-    right: 10%;
-  }
-  .image6 {
-    top: 30%;
-    right: 10%;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+  background-image: url("/Site-escola-energia/assets/imgs/image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.texto-lousa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #000;
+  z-index: 1;
+}
+
+.texto-lousa h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.texto-lousa p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#click-imagens {
+  display: none;
+}
+
+.image {
+  position: absolute;
+  width: 90px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.image img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.3);
+  z-index: 3;
+}
+
+.image1 {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.image2 {
+  top: 30%;
+  left: 10%;
+}
+.image3 {
+  bottom: 20%;
+  left: 10%;
+}
+.image4 {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.image5 {
+  bottom: 20%;
+  right: 10%;
+}
+.image6 {
+  top: 30%;
+  right: 10%;
+}
+
+.arrow {
+  position: absolute;
+  width: 60px;
+  z-index: 0;
+}
+
+.seta-solar {
+  top: 17.5%;
+  left: 42%;
+  transform: rotate(-10deg);
+}
+.seta-oceanica {
+  top: 45%;
+  left: 12.5%;
+  transform: rotate(10deg);
+}
+.seta-geotermica {
+  bottom: 20%;
+  left: 15%;
+  transform: rotate(10deg);
+}
+.seta-eolica {
+  bottom: 22%;
+  left: 50%;
+  transform: rotate(55deg);
+}
+.seta-biomassa {
+  bottom: 26%;
+  right: 18%;
+  transform: rotate(-5deg);
+}
+.seta-hidreletrica {
+  top: 45%;
+  right: 17%;
+  transform: rotate(-5deg);
+}
+
+.arrow img {
+  width: 150px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
   .arrow {
-    position: absolute;
-    width: 60px;
-    z-index: 0;
-  }
-  
-  .seta-solar {
-    top: 17.5%;
-    left: 42%;
-    transform: rotate(-10deg);
-  }
-  .seta-oceanica {
-    top: 45%;
-    left: 12.5%;
-    transform: rotate(10deg);
-  }
-  .seta-geotermica {
-    bottom: 20%;
-    left: 15%;
-    transform: rotate(10deg);
-  }
-  .seta-eolica {
-    bottom: 22%;
-    left: 50%;
-    transform: rotate(55deg);
-  }
-  .seta-biomassa {
-    bottom: 26%;
-    right: 18%;
-    transform: rotate(-5deg);
-  }
-  .seta-hidreletrica {
-    top: 45%;
-    right: 17%;
-    transform: rotate(-5deg);
-  }
-  
-  .arrow img {
-    width: 150px;
-  }
-  
-  .popup {
     display: none;
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
   }
-  
-  .popup-content {
-    background-color: white;
-    margin: 20% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-    font-size: 16px;
-  }
-  
-  .close {
-    float: right;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
+}
+
+@media (max-width: 1110px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
   }
 
-  @media (max-width: 1200px) {
-    .arrow {
-        display: none;
-    }
+  .texto-lousa {
+    position: static;
+    transform: none;
+    margin: 40px auto;
+    width: 85%;
+    padding: 40px;
   }
-  
-  @media (max-width: 1110px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-      place-content: center;
-    }
-  
-    .texto-lousa {
-      position: static;
-      transform: none;
-      margin: 40px auto;
-      width: 85%;
-      padding: 40px;
-    }
-  
-    .texto-lousa h2 {
-      font-size: 36px;
-    }
-  
-    .texto-lousa p {
-      font-size: 24px;
-    }
-  
-    .image {
-      width: 70px;
-    }
-  
-    .arrow {
-      display: none;
-    }
-  
-    .image1, .image2, .image3, .image4, .image5, .image6 {
-      position: static;
-      top: auto;
-      left: auto;
-      right: auto;
-      bottom: auto;
-      transform: none;
-    }
-  
-    .image-row {
-      display: flex;
-      place-content: center;
-      align-items: center;
-      gap: 45px;
-      width: 100%;
-    }
-  
-    #click-imagens {
-      display: block;
-      text-align: center;
-      font-size: 24px;
-      padding: 10px;
-    }
-  
-    .popup-content {
-      margin: 25% auto;
-      font-size: 30px;
-      padding: 40px;
-    }
-  
-    .close {
-      font-size: 30px;
-    }
-  }  
+
+  .texto-lousa h2 {
+    font-size: 36px;
+  }
+
+  .texto-lousa p {
+    font-size: 24px;
+  }
+
+  .image {
+    width: 70px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6 {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+  }
+
+  .image-row {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+  }
+
+  #click-imagens {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .popup-content {
+    margin: 25% auto;
+    font-size: 30px;
+    padding: 40px;
+  }
+
+  .close {
+    font-size: 30px;
+  }
+}
